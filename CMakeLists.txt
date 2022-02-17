@@ -40,4 +40,8 @@ add_executable(Cpp_DesignPatterns main.cpp
         Builder/PersonBuilder.cpp Builder/PersonBuilder.h
         Builder/ThinPersonBuilder.cpp Builder/ThinPersonBuilder.h
         Builder/FatPersonBuilder.cpp Builder/FatPersonBuilder.h
-        Builder/PersonDirector.cpp Builder/PersonDirector.h)
+        Builder/PersonDirector.cpp Builder/PersonDirector.h
+        Observer/Subject.cpp Observer/Subject.h
+        Observer/Observer.cpp Observer/Observer.h
+        Observer/Employee.cpp Observer/Employee.h
+        Observer/Reception.cpp Observer/Reception.h)

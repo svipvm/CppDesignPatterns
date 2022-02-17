@@ -28,6 +28,9 @@
 #include "Builder/ThinPersonBuilder.h"
 #include "Builder/FatPersonBuilder.h"
 #include "Builder/PersonDirector.h"
+// Observer
+#include "Observer/Reception.h"
+#include "Observer/Employee.h"
 
 
 void testSimpleFactory();
@@ -38,6 +41,7 @@ void testFactoryMethod();
 void testPrototype();
 void testTemplateMethod();
 void testBuilder();
+void testObserver();
 
 int main() {
     testSimpleFactory();
@@ -48,6 +52,7 @@ int main() {
     testPrototype();
     testTemplateMethod();
     testBuilder();
+    testObserver();
     return 0;
 }
 
@@ -143,4 +148,18 @@ void testBuilder() {
     auto personDirector = std::make_shared<PersonDirector>();
     personDirector->Construct(thinPersonBuilder);
     personDirector->Construct(fatPersonBuilder);
+}
+
+void testObserver() {
+    std::cout << "============ Observer ============" << std::endl;
+    auto reception = std::make_shared<Reception>();
+    auto vmice = std::make_shared<Employee>("vmice", reception);
+    auto svipvm = std::make_shared<Employee>("svipvm", reception);
+    reception->setState("first come in there ...");
+    reception->attach(vmice);
+    reception->attach(svipvm);
+    reception->notify();
+    reception->setState("second come in there ...");
+    reception->detach(svipvm);
+    reception->notify();
 }
