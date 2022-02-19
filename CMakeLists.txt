@@ -44,4 +44,4 @@ add_executable(Cpp_DesignPatterns main.cpp
         Observer/Subject.cpp Observer/Subject.h
         Observer/Observer.cpp Observer/Observer.h
         Observer/Employee.cpp Observer/Employee.h
-        Observer/Reception.cpp Observer/Reception.h)
+        Observer/Reception.cpp Observer/Reception.h AbstractFactory/UserInterface.cpp AbstractFactory/UserInterface.h AbstractFactory/AccessUser.cpp AbstractFactory/AccessUser.h AbstractFactory/RedisUser.cpp AbstractFactory/RedisUser.h AbstractFactory/DataFactory.cpp AbstractFactory/DataFactory.h AbstractFactory/RoomInterface.cpp AbstractFactory/RoomInterface.h AbstractFactory/AccessRoom.cpp AbstractFactory/AccessRoom.h AbstractFactory/RedisRoom.cpp AbstractFactory/RedisRoom.h)

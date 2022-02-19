@@ -31,6 +31,8 @@
 // Observer
 #include "Observer/Reception.h"
 #include "Observer/Employee.h"
+// AbstractFactory
+#include "AbstractFactory/DataFactory.h"
 
 
 void testSimpleFactory();
@@ -42,6 +44,7 @@ void testPrototype();
 void testTemplateMethod();
 void testBuilder();
 void testObserver();
+void testAbstractFactory();
 
 int main() {
     testSimpleFactory();
@@ -53,6 +56,7 @@ int main() {
     testTemplateMethod();
     testBuilder();
     testObserver();
+    testAbstractFactory();
     return 0;
 }
 
@@ -162,4 +166,14 @@ void testObserver() {
     reception->setState("second come in there ...");
     reception->detach(svipvm);
     reception->notify();
+}
+
+void testAbstractFactory() {
+    std::cout << "========= AbstractFactory =========" << std::endl;
+    auto redisUser = DataFactory::CreateUser();
+    auto redisRoom = DataFactory::CraeteRoom();
+    redisRoom->getRoom("123");
+    redisRoom->setRoom(456);
+    redisUser->getUser("vmice");
+    redisUser->setUser("svipvm");
 }
